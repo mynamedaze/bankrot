@@ -1,0 +1,123 @@
+.ways {
+  .ways__wrapper {
+    @include section-width;
+    @include paddings;
+    @include centers;
+    @media #{$min-tablet-width} {
+      padding-top: 21px;
+      padding-bottom: 15px;
+    }
+    @media #{$min-desktop-width} {
+      padding-top: 30px;
+    }
+  }
+  .ways__title {
+    @include common-title;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    @media #{$max-mobile-width} {
+      margin-top: -20px;
+    }
+    @media #{$min-tablet-width} {
+      letter-spacing: 2.3px;
+    }
+    @media #{$min-desktop-width} {
+      letter-spacing: 3.2px;
+    }
+    span {
+      font-size: 80px;
+    }
+  }
+  .ways__list {
+    padding-left: 0;
+    margin-bottom: 0;
+    max-width: 882px;
+    @include centers;
+    @media #{$max-mobile-width} {
+      margin-top: 18px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 49px;
+    }
+    @media #{$min-desktop-width} {
+      margin-top: 70px;
+    }
+  }
+  .ways__item {
+    position: relative;
+    &:not(:last-child) {
+      @media #{$max-mobile-width} {
+        margin-bottom: 18px;
+      }
+      @media #{$min-tablet-width} {
+        margin-bottom: 72px;
+      }
+      @media #{$min-desktop-width} {
+        margin-bottom: 103px;
+      }
+    }
+    &::after {
+      color: rgba(199, 139, 77, .1);
+      position: absolute;
+      font-family: $font--alt;
+      @media #{$max-mobile-width} {
+        left: 0;
+        font-size: 50px;
+        top: -50px;
+      }
+      @media #{$min-tablet-width} {
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 70px;
+        top: -75px;
+      }
+      @media #{$min-desktop-width} {
+        font-size: 100px;
+        letter-spacing: 3px;
+        top: -105px;
+      }
+    }
+    &:nth-child(1)::after {
+      content: "Банкротство";
+    }
+    &:nth-child(2)::after {
+      content: "Реструктуризация";
+    }
+    &:nth-child(3)::after {
+      content: "Частичное списание";
+      width: 1200px;
+      @media #{$min-tablet-width} {
+        text-align: center;
+      }
+    }
+  }
+  .ways__item-title {
+    font-family: $font--alt;
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: .8px;
+    @media #{$min-desktop-width} {
+      font-size: 36px;
+    }
+  }
+  .ways__item-description {
+    font-size: 16px;
+    letter-spacing: .9px;
+    line-height: 25px;
+    @media #{$max-mobile-width} {
+      margin-top: 10px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 15px;
+      line-height: 21px;
+    }
+    @media #{$min-desktop-width} {
+      font-size: 18px;
+      margin-top: 21px;
+      line-height: 30px;
+    }
+  }
+}

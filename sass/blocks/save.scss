@@ -1,0 +1,32 @@
+.save {
+  .save__wrapper {
+    @include section-width;
+    @include paddings;
+    @include centers;
+    @media #{$min-tablet-width} {
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 40% auto;
+      background-image: url("/img/save__bg--desktop.jpg");
+    }
+  }
+  .save__list {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .save__item {
+    @media #{$min-tablet-width} {
+      width: 50%;
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+  .save__title {
+    font-size: 24px;
+    font-family: $font--alt;
+    @media #{$min-desktop-width} {
+      font-size: 36px;
+    }
+  }
+}

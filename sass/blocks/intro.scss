@@ -1,0 +1,130 @@
+.intro {
+  .intro__wrapper {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include section-width;
+    @include paddings;
+    @include centers;
+    @media #{$max-mobile-width} {
+      background-image: url("/img/intro__bg--mobile.jpg");
+      padding-top: 22px;
+      padding-bottom: 24px;
+    }
+    @media #{$min-tablet-width} {
+      background-image: url("/img/intro__bg--desktop.jpg");
+      padding-top: 63px;
+      padding-bottom: 42px;
+    }
+    @media #{$min-desktop-width} {
+      padding-top: 90px;
+      padding-bottom: 60px;
+    }
+  }
+  .intro__title {
+    font-family: $font--alt;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+    @media #{$max-mobile-width} {
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+    @media #{$min-tablet-width} {
+      text-align: center;
+      font-size: 21px;
+    }
+    @media #{$min-desktop-width} {
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+  }
+  .intro__subtitle {
+    @include common-title;
+    margin-bottom: 0;
+    @media #{$max-mobile-width} {
+      margin-top: 14px;
+      font-size: 36px;
+      letter-spacing: 1px;
+    }
+    @media #{$min-tablet-width} {
+      text-align: center;
+      margin-top: 15px;
+      letter-spacing: 1px;
+    }
+    @media #{$min-desktop-width} {
+      margin-top: 22px;
+      letter-spacing: 1.6px;
+    }
+  }
+  .intro__description {
+    display: block;
+    font-family: $font--alt;
+    letter-spacing: 1.2px;
+    @media #{$max-mobile-width} {
+      font-size: 18px;
+      line-height: 27px;
+      margin-top: 35px;
+    }
+    @media #{$min-tablet-width} {
+      font-size: 21px;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 1.4px;
+      margin-top: 33px;
+    }
+    @media #{$min-desktop-width} {
+      font-size: 30px;
+      line-height: 45px;
+      letter-spacing: 2px;
+      margin-top: 47px;
+    }
+  }
+  .intro__null {
+    display: block;
+    font-family: $font--alt;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: .6px;
+    @media #{$max-mobile-width} {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    @media #{$min-tablet-width} {
+      font-size: 16px;
+      margin-top: 30px;
+    }
+    @media #{$min-desktop-width} {
+      font-size: 20px;
+      margin-top: 43px;
+    }
+  }
+  .intro__buttons-container {
+    display: flex;
+    justify-content: space-between;
+    @include centers;
+    @media #{$max-mobile-width} {
+      margin-top: 18px;
+      max-width: 350px;
+    }
+    @media #{$min-tablet-width} {
+      width: 533px;
+      margin-top: 7px;
+    }
+    @media #{$min-desktop-width} {
+      margin-top: 10px;
+    }
+  }
+  .intro__button {
+    @include main-btn;
+    @include main-btn--thin;
+    text-transform: none;
+    @media #{$max-mobile-width} {
+      width: 49%;
+      font-size: 14px;
+    }
+    @media #{$min-tablet-width} {
+      width: 250px;
+    }
+  }
+}

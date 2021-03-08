@@ -1,0 +1,106 @@
+@mixin paddings {
+  @media #{$max-mobile-width} {
+    padding-left: $padding--mobile;
+    padding-right: $padding--mobile;
+  }
+  @media #{$min-tablet-width} {
+    padding-left: $padding--tablet;
+    padding-right: $padding--tablet;
+  }
+  @media #{$min-desktop-width} {
+    padding-left: $padding--desktop;
+    padding-right: $padding--desktop;
+  }
+}
+@mixin section-width {
+  max-width: $max-desktop-wrapper;
+}
+@mixin centers {
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin common-title {
+  font-family: $font--alt;
+  font-weight: 400;
+  margin-top: 0;
+  display: block;
+  @media #{$max-mobile-width} {
+    font-size: 30px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 35px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 50px;
+  }
+}
+@mixin link {
+  font-family: $font--alt;
+  color: $link-color;
+  &:visited {
+    color: $color--main;
+  }
+  &:hover,
+  &:active {
+    color: $link-color--hover;
+  }
+}
+@mixin main-btn {
+  background-color: $button--bg;
+  font-family: $font--main;
+  color: #ffffff;
+  letter-spacing: 1px;
+  display: inline-block;
+  border-radius: 3px;
+  border: 0 solid transparent;
+  min-height: 50px;
+  padding: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@mixin main-btn--header {
+  @media #{$max-mobile-width} {
+    min-height: 40px;
+    font-size: 0;
+  }
+  @media #{$min-tablet-width} {
+    min-height: 55px;
+  }
+}
+@mixin main-btn--thin {
+  min-height: 45px;
+}
+@mixin slider-dots {
+  .owl-dot span {
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .2);
+    background-color: #8396a7 !important;
+    @media #{$max-mobile-width} {
+      width: 13px !important;
+      height: 13px !important;
+    }
+    @media #{$min-tablet-width} {
+      width: 13px !important;
+      height: 13px !important;
+    }
+    @media #{$min-desktop-width} {
+      width: 16px !important;
+      height: 16px !important;
+    }
+  }
+  .owl-dot {
+    &.active span {
+      background-color: #f7b901 !important;
+    }
+  }
+}
+@mixin slider-nav {
+
+}
+@mixin form-input {
+  &::-webkit-input-placeholder {color:#fff;}
+  &::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+  &:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+  &:-ms-input-placeholder      {color:#fff;}
+}

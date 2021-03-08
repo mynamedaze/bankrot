@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: $font--main;
+  font-weight: 400;
+  color: $color--main;
+  margin: 0;
+  transition: all 0.2s ease 0s;
+  overflow-x: hidden;
+  @media #{$max-mobile-width} {
+    font-size: 16px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 16px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 18px;
+  }
+}
+.visually-hidden{
+  position: absolute;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+input[type="submit"] {
+  cursor: pointer;
+}
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+}
+input:focus,
+button:focus {
+  outline-width: 0;
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+label {
+  cursor: pointer;
+}
+.clearfix::after {
+  content: ""; /* Генерируем пустой элемент */
+  clear: both; /* Отменяем обтекание*/
+  display: block; /* Блочный элемент */
+}
+.strong {
+  font-weight: 700;
+}
+.disable {
+  display: none !important;
+}
+header,
+footer,
+main,
+.main-nav {
+  img {
+    width: 100%;
+    height: auto;
+  }
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    transition: all 0.2s ease 0s;
+  }
+}
+.page-header,
+.page-footer,
+.main {
+  overflow: hidden;
+}
+.utm-container {
+  display: none;
+}
