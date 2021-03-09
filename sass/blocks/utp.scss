@@ -1,0 +1,103 @@
+.utp {
+  .utp__wrapper {
+    @include section-width;
+    @include paddings;
+    @include centers;
+    @media #{$max-mobile-width} {
+      padding-top: 12px;
+      padding-bottom: 35px;
+    }
+    @media #{$min-tablet-width} {
+      padding-bottom: 42px;
+    }
+    @media #{$min-desktop-width} {
+      padding-bottom: 61px;
+    }
+  }
+  .utp__list {
+    padding-left: 0;
+    max-width: 980px;
+    @include centers;
+    margin-bottom: 0;
+    @media #{$min-tablet-width} {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+  }
+  .utp__item {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid $color--alt;
+    border-radius: 3px;
+    @media #{$max-mobile-width} {
+      padding-left: 34px;
+      padding-right: 34px;
+      padding-top: 37px;
+      padding-bottom: 34px;
+      min-height: 189px;
+    }
+    @media #{$min-tablet-width} {
+      padding-top: 26px;
+      padding-bottom: 14px;
+      padding-left: 25px;
+      padding-right: 25px;
+      min-height: 132px;
+      width: 30%;
+      flex-grow: 1;
+    }
+    @media #{$min-desktop-width} {
+      padding-top: 38px;
+      padding-bottom: 20px;
+      padding-left: 36px;
+      padding-right: 36px;
+      min-height: 189px;
+    }
+    &:not(:first-child) {
+      @media #{$max-mobile-width} {
+        margin-top: 10px;
+      }
+    }
+    &:nth-child(1) {
+      background-image: url("/img/utp__bg--1.jpg");
+      @media #{$min-tablet-width} {
+        margin-right: 15px;
+      }
+      @media #{$min-desktop-width} {
+        margin-right: 22px;
+      }
+    }
+    &:nth-child(2) {
+      background-image: url("/img/utp__bg--2.jpg");
+      @media #{$min-tablet-width} {
+        margin-right: 15px;
+      }
+      @media #{$min-desktop-width} {
+        margin-right: 22px;
+      }
+    }
+    &:nth-child(3) {
+      background-image: url("/img/utp__bg--3.jpg");
+    }
+  }
+  .utp__item-title {
+    font-size: 18px;
+    display: block;
+    font-family: $font--alt;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+  }
+  .utp__item-description {
+    font-size: 15px;
+    letter-spacing: .5px;
+    display: block;
+    line-height: 22.5px;
+    @media #{$max-mobile-width} {
+      margin-top: 14px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 15px;
+    }
+  }
+}

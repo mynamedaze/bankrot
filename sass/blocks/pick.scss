@@ -30,6 +30,8 @@
     @include centers;
     border: 1px solid #B6A188;
     border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
     @media #{$max-mobile-width} {
       padding-top: 8px;
       padding-bottom: 13px;
@@ -51,8 +53,10 @@
     font-size: 24px;
     text-align: center;
     font-weight: 700;
+    letter-spacing: .6px;
     @media #{$min-desktop-width} {
       font-size: 36px;
+      letter-spacing: 1px;
     }
   }
   .pick__subtitle {
@@ -67,13 +71,14 @@
     }
   }
   .pick__button-container {
-    width: 294px;
     @include centers;
     @media #{$max-mobile-width} {
       margin-top: 25px;
+      max-width: 294px;
     }
     @media #{$min-tablet-width} {
       margin-top: 25px;
+      width: 294px;
     }
     @media #{$min-desktop-width} {
       margin-top: 36px;

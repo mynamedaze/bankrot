@@ -59,8 +59,10 @@
   width: 100%;
   font-weight: 700;
   text-transform: uppercase;
+  font-size: 18px;
 }
 @mixin main-btn--header {
+  font-size: 16px;
   @media #{$max-mobile-width} {
     min-height: 40px;
     font-size: 0;
@@ -71,6 +73,7 @@
 }
 @mixin main-btn--thin {
   min-height: 45px;
+  font-size: 16px;
 }
 @mixin slider-dots {
   .owl-dot span {
@@ -98,9 +101,16 @@
 @mixin slider-nav {
 
 }
-@mixin form-input {
-  &::-webkit-input-placeholder {color:#fff;}
-  &::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
-  &:-moz-placeholder           {color:#fff;}/* Firefox 18- */
-  &:-ms-input-placeholder      {color:#fff;}
+@mixin common-input {
+  border-radius: 3px;
+  border: 0 solid transparent;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 50px;
+  width: 100%;
+  font-size: 18px;
+  &::-webkit-input-placeholder {color:#30373A;}
+  &::-moz-placeholder          {color:#30373A;}/* Firefox 19+ */
+  &:-moz-placeholder           {color:#30373A;}/* Firefox 18- */
+  &:-ms-input-placeholder      {color:#30373A;}
 }

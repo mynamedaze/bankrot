@@ -1,0 +1,95 @@
+.ten {
+  .ten__wrapper {
+    @include section-width;
+    @include paddings;
+    @include centers;
+    @media #{$max-mobile-width} {
+      padding-top: 18px;
+    }
+    @media #{$min-tablet-width} {
+      padding-top: 28px;
+    }
+    @media #{$min-desktop-width} {
+      padding-top: 40px;
+    }
+  }
+  .ten__container {
+    max-width: 980px;
+    @include centers;
+    background-repeat: no-repeat;
+    border: 1px solid $color--alt;
+    border-radius: 3px;
+    padding-left: 28px;
+    padding-right: 28px;
+    @media #{$max-mobile-width} {
+      background-size: 100% auto;
+      background-position: center bottom;
+      background-image: url("/img/ten__bg--mobile.jpg");
+      padding-bottom: 22px;
+    }
+    @media #{$min-tablet-width} {
+      background-size: cover;
+      background-position: center;
+      background-image: url("/img/ten__bg--desktop.jpg");
+      padding-top: 21px;
+      padding-bottom: 24px;
+    }
+    @media #{$min-desktop-width} {
+      padding-top: 30px;
+      padding-bottom: 35px;
+    }
+  }
+  .ten__title {
+    display: block;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 1.6px;
+    text-align: center;
+    font-family: $font--alt;
+    @media #{$max-mobile-width} {
+      font-weight: 700;
+      padding-top: 20px;
+    }
+    @media #{$min-desktop-width} {
+      font-size: 36px;
+      letter-spacing: 2.2px;
+    }
+    span {
+      white-space: nowrap;
+    }
+  }
+  .ten__description {
+    display: block;
+    text-align: center;
+    letter-spacing: .6px;
+    @media #{$max-mobile-width} {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 27px;
+      font-size: 18px;
+    }
+    @media #{$min-desktop-width} {
+      margin-top: 38px;
+    }
+  }
+  .ten__button-container {
+    @include centers;
+    @media #{$max-mobile-width} {
+      margin-top: 22px;
+      max-width: 294px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 21px;
+      width: 294px;
+    }
+    @media #{$min-desktop-width} {
+      margin-top: 30px;
+    }
+  }
+  .ten__button {
+    @include main-btn;
+    text-transform: none;
+  }
+}
