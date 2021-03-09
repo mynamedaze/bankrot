@@ -15,12 +15,15 @@
     @include paddings;
     @include centers;
     @media #{$max-mobile-width} {
+      padding-top: 22px;
       padding-bottom: 10px;
     }
     @media #{$min-tablet-width} {
+      padding-top: 38px;
       padding-bottom: 42px;
     }
     @media #{$min-desktop-width} {
+      padding-top: 55px;
       padding-bottom: 60px;
     }
   }
@@ -32,7 +35,15 @@
     font-size: 18px;
     line-height: 29.7px;
     text-align: center;
+    margin-bottom: 0;
+    @media #{$max-mobile-width} {
+      margin-top: 13px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 21px;
+    }
     @media #{$min-desktop-width} {
+      margin-top: 30px;
       font-size: 24px;
       line-height: 39.6px
     }
@@ -43,12 +54,25 @@
     line-height: 48px;
     display: block;
     text-align: center;
+    @media #{$max-mobile-width} {
+      margin-top: 20px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 21px;
+    }
+    @media #{$min-desktop-width} {
+      margin-top: 30px;
+    }
   }
   .key__list {
     padding-left: 0;
     @media #{$min-tablet-width} {
       display: flex;
       justify-content: space-between;
+      margin-top: 28px;
+    }
+    @media #{$min-desktop-width} {
+      margin-top: 40px;
     }
   }
   .key__item {
@@ -57,9 +81,23 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding-right: 20px;
+    @media #{$max-mobile-width} {
+      padding-left: 65px;
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
     @media #{$min-tablet-width} {
+      padding-left: 45px;
       width: 30%;
       flex-grow: 1;
+      padding-top: 21px;
+      padding-bottom: 14px;
+    }
+    @media #{$min-desktop-width} {
+      padding-left: 65px;
+      padding-top: 30px;
+      padding-bottom: 20px;
     }
     &:nth-child(1) {
       background-image: url("/img/key__utp-bg--1.jpg");
@@ -69,6 +107,11 @@
     }
     &:nth-child(3) {
       background-image: url("/img/key__utp-bg--3.jpg");
+    }
+    &:not(:first-child) {
+      @media #{$max-mobile-width} {
+        margin-top: 10px;
+      }
     }
     &:not(:last-child) {
       @media #{$min-tablet-width} {
@@ -83,5 +126,19 @@
     font-family: $font--alt;
     font-size: 24px;
     line-height: 32px;
+    @media #{$min-desktop-width} {
+      letter-spacing: .8px;
+    }
+  }
+  .key__item-text {
+    font-size: 15px;
+    line-height: 22.5px;
+    margin-bottom: 0;
+    @media #{$max-mobile-width} {
+      margin-top: 20px;
+    }
+    @media #{$min-desktop-width} {
+      letter-spacing: .4px;
+    }
   }
 }
