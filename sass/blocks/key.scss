@@ -30,12 +30,17 @@
   .key__title {
     @include common-title;
     text-align: center;
+    letter-spacing: 1.4px;
+    @media #{$min-desktop-width} {
+      letter-spacing: 2px;
+    }
   }
   .key__description {
     font-size: 18px;
     line-height: 29.7px;
     text-align: center;
     margin-bottom: 0;
+    letter-spacing: .5px;
     @media #{$max-mobile-width} {
       margin-top: 13px;
     }
@@ -54,6 +59,7 @@
     line-height: 48px;
     display: block;
     text-align: center;
+    letter-spacing: 1px;
     @media #{$max-mobile-width} {
       margin-top: 20px;
     }
@@ -66,6 +72,7 @@
   }
   .key__list {
     padding-left: 0;
+    margin-bottom: 0;
     @media #{$min-tablet-width} {
       display: flex;
       justify-content: space-between;
@@ -88,14 +95,14 @@
       padding-bottom: 28px;
     }
     @media #{$min-tablet-width} {
-      padding-left: 45px;
+      padding-left: 40px;
       width: 30%;
       flex-grow: 1;
       padding-top: 21px;
       padding-bottom: 14px;
     }
     @media #{$min-desktop-width} {
-      padding-left: 65px;
+      padding-left: 57px;
       padding-top: 30px;
       padding-bottom: 20px;
     }
@@ -125,20 +132,16 @@
   .key__item-title {
     font-family: $font--alt;
     font-size: 24px;
+    letter-spacing: .8px;
     line-height: 32px;
-    @media #{$min-desktop-width} {
-      letter-spacing: .8px;
-    }
   }
   .key__item-text {
     font-size: 15px;
+    letter-spacing: .4px;
     line-height: 22.5px;
     margin-bottom: 0;
     @media #{$max-mobile-width} {
       margin-top: 20px;
-    }
-    @media #{$min-desktop-width} {
-      letter-spacing: .4px;
     }
   }
 }

@@ -170,18 +170,13 @@
           </div>
           <ul class="cases__images-list">
             <li class="cases__images-item">
-              <a href="#" data-fancybox="case-1">
-                <img src="#" alt="Решение по банкротству 1">
+              <a href="/img/cases/01/1_page-0001.jpg" data-fancybox="case-1">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 1">
               </a>
             </li>
-            <li class="cases__images-item">
-              <a href="#" data-fancybox="case-1">
-                <img src="#" alt="Решение по банкротству 1">
-              </a>
-            </li>
-            <li class="cases__images-item">
-              <a href="#" data-fancybox="case-1">
-                <img src="#" alt="Решение по банкротству 1">
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/01/1_page-0002.jpg" data-fancybox="case-1">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 1">
               </a>
             </li>
           </ul>
@@ -197,32 +192,95 @@
           </div>
           <ul class="cases__images-list">
             <li class="cases__images-item">
-              <a href="#" data-fancybox="case-1">
-                <img src="#" alt="Решение по банкротству 1">
+              <a href="/img/cases/02/2_page-0001.jpg" data-fancybox="case-2">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 2">
               </a>
             </li>
-            <li class="cases__images-item">
-              <a href="#" data-fancybox="case-1">
-                <img src="#" alt="Решение по банкротству 1">
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/02/2_page-0002.jpg" data-fancybox="case-2">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 2">
               </a>
             </li>
-            <li class="cases__images-item">
-              <a href="#" data-fancybox="case-1">
-                <img src="#" alt="Решение по банкротству 1">
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/02/2_page-0003.jpg" data-fancybox="case-2">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 2">
               </a>
             </li>
           </ul>
         </li>
       </ul>
+      <button class="cases__show-more-btn">еще</button>
     </div>
   </section>
   <section class="team">
     <div class="team__wrapper">
+      <span class="team__title">Наша команда</span>
       <ul class="team__list">
         <li class="team__item">
-
+          <div class="team__item-container">
+            <div class="team__item-img-container">
+              <img src="/img/team/zaur.jpg" alt="Заур" class="team__item-img">
+            </div>
+            <span class="team__item-name">Заур</span>
+            <span class="team__item-description">руководитель ЮК “ФинЮрист”, общий юридический стаж 8 лет, опыт в процедурах банкротства 5 лет</span>
+          </div>
+        </li>
+        <li class="team__item">
+          <div class="team__item-container">
+            <div class="team__item-img-container">
+              <img src="/img/team/kirill.jpg" alt="Кирилл" class="team__item-img">
+            </div>
+            <span class="team__item-name">Кирилл</span>
+            <span class="team__item-description">маркетолог</span>
+          </div>
+        </li>
+        <li class="team__item">
+          <div class="team__item-container">
+            <div class="team__item-img-container">
+              <img src="/img/team/anna.jpg" alt="Анна" class="team__item-img">
+            </div>
+            <span class="team__item-name">Анна</span>
+            <span class="team__item-description">руководитель юридического отдела</span>
+          </div>
+        </li>
+        <li class="team__item">
+          <div class="team__item-container">
+            <div class="team__item-img-container">
+              <img src="/img/team/ilya.jpg" alt="Илья" class="team__item-img">
+            </div>
+            <span class="team__item-name">Илья</span>
+            <span class="team__item-description">менеджер по клиентскому сервису</span>
+          </div>
+        </li>
+        <li class="team__item">
+          <div class="team__item-container">
+            <div class="team__item-img-container">
+              <img src="/img/team/konstantin.jpg" alt="Константин" class="team__item-img">
+            </div>
+            <span class="team__item-name">Константин</span>
+            <span class="team__item-description">ведущий юрист</span>
+          </div>
         </li>
       </ul>
+    </div>
+  </section>
+  <section class="attention">
+    <div class="attention__wrapper">
+      <span class="attention__title">Внимание!</span>
+      <div class="attention__container">
+        <p class="attention__description">Оставьте заявку! Поможем Вам разобраться в ситуации!</p>
+        <form action="#" method="post" class="attention__form">
+          <div class="attention__input-container">
+            <input type="text" name="d-name" id="attention-input-name" class="attention__input" placeholder="Имя">
+          </div>
+          <div class="attention__input-container">
+            <input type="tel" name="d-phone" id="attention-input-phone" class="attention__input" placeholder="Телефон">
+          </div>
+          <div class="attention__submit-container">
+            <input type="submit" class="attention__submit" value="Отправить">
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 </main>
@@ -285,61 +343,5 @@
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/jquery.inputmask.bundle.js"></script>
 <script src="js/main.js"></script>
-<script type="text/javascript">var namekey = ['utm_source','utm_campaign','utm_medium','utm_term','utm_content'];
-
-jQuery(document).ready(function (){
-  input();
-});
-
-function input(){
-  var $_GET = parseGET();
-  for(z=0; z<namekey.length; z++){
-    if(!!$_GET[namekey[z]]){
-      document.cookie = namekey[z]+"="+$_GET[namekey[z]]+"; path=/;";
-    }
-  }
-}
-
-function parseGET(url){
-
-  if(!url || url == '') url = decodeURI(document.location.search);
-
-  if(url.indexOf('?') < 0) return Array();
-  url = url.split('?');
-  url = url[1];
-  var GET = [],
-
-          params = [],
-
-          key = [];
-
-  if(url.indexOf('#')!=-1){ url = url.substr(0,url.indexOf('#')); }
-
-  if(url.indexOf('&') > -1){ params = url.split('&');} else {params[0] = url; }
-
-
-  for (r=0; r<params.length; r++){
-
-    for (z=0; z<namekey.length; z++){
-
-      if(params[r].indexOf(namekey[z]+'=') > -1){
-
-        if(params[r].indexOf('=') > -1) {
-
-          key = params[r].split('=');
-
-          GET[key[0]]=key[1];
-
-        }
-
-      }
-
-    }
-
-  }
-
-  return (GET);
-
-};</script>
 </body>
 </html>
