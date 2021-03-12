@@ -1,0 +1,80 @@
+.map {
+  .map__wrapper {
+    @include section-width;
+    @include centers;
+    @include paddings;
+    position: relative;
+    z-index: 3;
+    &::after {
+      @media #{$min-tablet-width} {
+        position: absolute;
+        content: "";
+        left: -9900px;
+        top: 0;
+        width: 10000px;
+        height: 490px;
+        background-color: saddlebrown;
+      }
+    }
+  }
+  .map__container {
+    @media #{$min-tablet-width} {
+      position: absolute;
+      z-index: 4;
+      background-color: #fff;
+    }
+    @media #{$min-desktop-width} {
+      width: 380px;
+      height: 490px;
+    }
+  }
+  .map__map {
+    @media #{$max-mobile-width} {
+      display: none;
+    }
+    @media #{$min-tablet-width} {
+      width: 100%;
+      height: 490px;
+      background-color: orange;
+    }
+  }
+  .map__title {
+    display: block;
+    font-size: 36px;
+    font-family: $font--alt;
+  }
+  .map__phone-text {
+    display: block;
+    font-size: 18px;
+    color: $color--alt;
+    font-weight: 700;
+  }
+  .map__phone-link {
+    color: $color--alt;
+  }
+  .map__text-container {
+    padding-left: 30px;
+    background-repeat: no-repeat;
+  }
+  .map__text-container--mail {
+    background-position: left top;
+    background-size: 19px auto;
+    background-image: url("/img/mail-icon.svg");
+  }
+  .map__text-container--address {
+    background-position: left top;
+    background-size: 20px auto;
+    background-image: url("/img/address-icon.svg");
+  }
+  .map__text-container--address {
+    background-position: left top;
+    background-size: 19px auto;
+    background-image: url("/img/time-icon.svg");
+  }
+  .map__text-title {
+    display: block;
+  }
+  .map__text-description {
+    display: block;
+  }
+}

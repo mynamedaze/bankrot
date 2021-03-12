@@ -23,4 +23,9 @@ $(document).ready(function () {
         initMobileCarousel();
         $(window).resize(initMobileCarousel);
     }
+
+    ymaps.ready(init);
+    function init(){
+        var myMap = new ymaps.Map("map");
+    }
 });
