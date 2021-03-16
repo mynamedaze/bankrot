@@ -1,4 +1,9 @@
 $(document).ready(function () {
+
+    let popup = document.getElementsByClassName('popup');
+    let popupSuccess = document.getElementsByClassName('popup-success');
+    let overlay = document.getElementsByClassName('overlay');
+
     if ($('.team__list')) {
         function initMobileCarousel() {
             var checkWidth = $(window).width();
@@ -175,4 +180,53 @@ $(document).ready(function () {
         $(casesItem).removeClass('disable');
         $(casesShowMore).addClass('disable');
     });
+
+    /*всплывающее меню при скролле вниз*/
+    /*троттлинг функция*/
+    function throttleFloating(func, ms) {
+
+        var isThrottled = false,
+            savedArgs,
+            savedThis;
+
+        function wrapper() {
+
+            if (isThrottled) { // (2)
+                savedArgs = arguments;
+                savedThis = this;
+                return;
+            }
+
+            func.apply(this, arguments); // (1)
+
+            isThrottled = true;
+
+            setTimeout(function () {
+                isThrottled = false; // (3)
+                if (savedArgs) {
+                    wrapper.apply(savedThis, savedArgs);
+                    savedArgs = savedThis = null;
+                }
+            }, ms);
+        }
+
+        return wrapper;
+    }
+    /* */
+    var travelMenu = document.getElementsByClassName('floating-menu');
+
+    var hiddenMenuDown = function () {
+        if (window.pageYOffset > 100) {
+            $(travelMenu).addClass('floating-menu--active');
+        } else {
+            $(travelMenu).removeClass('floating-menu--active');
+        }
+    }
+
+    var hiddenMenuDown100 = throttleFloating(hiddenMenuDown, 100);
+
+    $(window).scroll(function () {
+        hiddenMenuDown100();
+    });
+    /* */
 });
