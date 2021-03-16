@@ -1,0 +1,131 @@
+.popup-callback {
+  position: fixed;
+  display: none;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  padding-top: 40px;
+  border: 2px solid $button--bg;
+  background-color: $bg--main;
+  @media #{$max-mobile-width} {
+    width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  @media #{$min-tablet-width} {
+    width: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+  }
+  @media #{$min-desktop-width} {
+    width: 450px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+  }
+}
+.popup-callback__close-btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  border: 0 solid transparent;
+  background-color: transparent;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    width: 1px;
+    height: 80%;
+    background-color: $button--bg;
+  }
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+.popup-callback__title {
+  display: block;
+  text-align: center;
+  font-weight: 900;
+  color: $button--bg;
+  @media #{$max-mobile-width} {
+    font-size: 22px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 26px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 36px;
+  }
+}
+.popup-callback__subtitle {
+  display: block;
+  color: #fff;
+  margin-top: 10px;
+  text-align: center;
+  @media #{$max-mobile-width} {
+    font-size: 14px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 14px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 18px;
+  }
+}
+.popup-callback__form {
+  @include centers;
+  @media #{$max-mobile-width} {
+    max-width: 200px;
+    margin-top: 10px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 10px;
+    width: 210px;
+  }
+  @media #{$min-desktop-width} {
+    width: 300px;
+  }
+}
+.popup-callback__input {
+  width: 100%;
+  margin-top: 20px;
+  @include common-input;
+  border: 1px solid $button--bg;
+}
+.popup-callback__submit-container {
+  @include centers;
+  display: flex;
+  flex-direction: column;
+  @media #{$max-mobile-width} {
+    width: 120px;
+    margin-top: 20px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 30px;
+  }
+  @media #{$min-desktop-width} {
+    width: 200px;
+  }
+  .confid {
+    color: $color--main;
+    margin-top: 10px;
+    a {
+      color: $button--bg;
+    }
+  }
+}
+.popup-callback__submit {
+  @include main-btn;
+}

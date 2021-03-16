@@ -60,6 +60,10 @@
   font-weight: 700;
   text-transform: uppercase;
   font-size: 18px;
+  &:hover {
+    transition: box-shadow .2s 0s ease-in-out;
+    box-shadow: 0 0 0 5px rgba(182, 161, 136, .3);
+  }
 }
 @mixin main-btn--header {
   font-size: 16px;

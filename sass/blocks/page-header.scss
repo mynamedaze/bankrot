@@ -18,8 +18,9 @@
       padding-bottom: 26px;
     }
   }
-  .page-header__logo-container {
+  .page-header__logo-link {
     margin-right: auto;
+    display: block;
     @media #{$max-mobile-width} {
       width: 170px;
     }

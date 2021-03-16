@@ -1,0 +1,147 @@
+.page-footer {
+  background-color: $bg--footer;
+  .page-footer__wrapper {
+    @include section-width;
+    @include paddings;
+    @include centers;
+    @media #{$max-mobile-width} {
+      padding-top: 25px;
+      padding-bottom: 9px;
+    }
+    @media #{$min-tablet-width} {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 43px;
+      padding-bottom: 40px;
+    }
+    @media #{$min-desktop-width} {
+      padding-top: 61px;
+      padding-bottom: 57px;
+    }
+  }
+  .page-footer__logo-link {
+    display: block;
+    @media #{$max-mobile-width} {
+      max-width: 222px;
+      @include centers;
+      margin-bottom: 10px;
+    }
+    @media #{$min-tablet-width} {
+      width: 222px;
+      margin-bottom: 10px;
+    }
+  }
+  .page-footer__first-description {
+    color: $color--alt2;
+    font-size: 14px;
+    display: block;
+    letter-spacing: .8px;
+    @media #{$max-mobile-width} {
+      text-align: center;
+      margin-top: 5px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 5px;
+    }
+  }
+  .page-footer__second-container {
+    @media #{$max-mobile-width} {
+      display: flex;
+      flex-direction: column;
+    }
+    @media #{$min-tablet-width} {
+      width: 256px;
+    }
+  }
+  .page-footer__interactive-container {
+    @media #{$max-mobile-width} {
+      display: flex;
+      order: 2;
+      justify-content: center;
+      margin-top: 17px;
+      align-items: center;
+    }
+  }
+  .page-footer__links-container {
+    @media #{$min-tablet-width} {
+      display: none;
+    }
+  }
+  .page-footer__button-container {
+    @media #{$max-mobile-width} {
+      margin-left: 5px;
+    }
+  }
+  .page-footer__button {
+    @include main-btn;
+    @media #{$max-mobile-width} {
+      font-size: 0;
+      width: 40px;
+      min-height: 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 24px auto;
+      background-image: url("/img/phone-icon-white.svg");
+    }
+  }
+  .page-footer__socials {
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 1px;
+    @media #{$max-mobile-width} {
+      width: 300px;
+      @include centers;
+      margin-top: 20px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 28px;
+    }
+    @media #{$min-desktop-width} {
+      margin-top: 41px;
+    }
+  }
+  .page-footer__social-link {
+    font-size: 14px;
+    position: relative;
+    color: $color--alt;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+  .page-footer__social-link--vkontakte {
+    padding-left: 42px;
+    &::before {
+      width: 35px;
+      height: 19px;
+      background-image: url("/img/vk-logo.svg");
+    }
+  }
+  .page-footer__social-link--instagram {
+    padding-left: 35px;
+    &::before {
+      width: 26px;
+      height: 26px;
+      background-image: url("/img/instagram-logo.svg");
+    }
+  }
+  .page-footer__phone-link {
+    letter-spacing: 1px;
+    color: $color--alt2;
+    display: block;
+    text-align: right;
+  }
+  .page-footer__phone-description {
+    letter-spacing: 1px;
+    display: block;
+    color: $color--alt;
+    text-align: right;
+  }
+}

@@ -33,6 +33,8 @@
     }
     @media #{$min-tablet-width} {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
   .cases__item {
@@ -41,21 +43,11 @@
       justify-content: center;
     }
     @media #{$min-tablet-width} {
-      width: 50%;
+      width: 48%;
       margin-top: 28px;
     }
     @media #{$min-desktop-width} {
       margin-top: 40px;
-    }
-    &:nth-child(2n-1) {
-      @media #{$min-tablet-width} {
-        margin-right: 30px;
-      }
-    }
-    &:nth-child(2n) {
-      @media #{$min-tablet-width} {
-        margin-right: 30px;
-      }
     }
     &:not(:first-child) {
       @media #{$max-mobile-width} {

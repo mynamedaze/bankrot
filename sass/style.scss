@@ -4,6 +4,9 @@
 @import "./global/mixins";
 @import "./global/scaffolding";
 
+//pages
+@import "./blocks/confid";
+
 //blocks
 @import "./blocks/page-header";
 @import "./blocks/intro";
@@ -18,3 +21,12 @@
 @import "./blocks/team";
 @import "./blocks/question";
 @import "./blocks/map";
+@import "./blocks/page-footer";
+
+//components
+@import "./components/confidbox";
+
+//popups
+@import "./blocks/popup-callback";
+@import "./blocks/popup-success";
+@import "./blocks/overlay";

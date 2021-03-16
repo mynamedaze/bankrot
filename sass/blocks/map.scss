@@ -12,20 +12,35 @@
         left: -9900px;
         top: 0;
         width: 10000px;
+        height: 400px;
+        background-color: $bg--main;
+      }
+      @media #{$min-desktop-width} {
         height: 490px;
-        background-color: saddlebrown;
       }
     }
   }
   .map__container {
+    @media #{$max-mobile-width} {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
     @media #{$min-tablet-width} {
       position: absolute;
       z-index: 4;
       background-color: #fff;
+      width: 266px;
+      height: 400px;
+      padding-top: 61px;
+      padding-left: 4px;
+      padding-right: 10px;
+      padding-bottom: 10px;
     }
     @media #{$min-desktop-width} {
       width: 380px;
       height: 490px;
+      padding-top: 87px;
+      padding-left: 5px;
     }
   }
   .map__map {
@@ -34,23 +49,39 @@
     }
     @media #{$min-tablet-width} {
       width: 100%;
+      height: 400px;
+    }
+    @media #{$min-desktop-width} {
       height: 490px;
-      background-color: orange;
     }
   }
   .map__title {
     display: block;
     font-size: 36px;
     font-family: $font--alt;
+    letter-spacing: 2px;
   }
   .map__phone-text {
     display: block;
     font-size: 18px;
     color: $color--alt;
     font-weight: 700;
+    letter-spacing: 1px;
+    @media #{$max-mobile-width} {
+      margin-top: 15px;
+    }
+    @media #{$min-tablet-width} {
+      margin-top: 28px;
+      margin-bottom: 24px;
+    }
+    @media #{$min-desktop-width} {
+      margin-top: 40px;
+      margin-bottom: 35px;
+    }
   }
   .map__phone-link {
     color: $color--alt;
+    white-space: nowrap;
   }
   .map__text-container {
     padding-left: 30px;
@@ -73,8 +104,15 @@
   }
   .map__text-title {
     display: block;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 20px;
+    letter-spacing: 1px;
   }
   .map__text-description {
+    letter-spacing: 1px;
     display: block;
+    font-size: 16px;
+    margin-top: 5px;
   }
 }

@@ -10,14 +10,29 @@
   <link rel="stylesheet" href="css/jquery.fancybox.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
-  <title>Банкротство</title>
+  <title>ФинЮрист - банкротство физических лиц</title>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(73629022, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/73629022" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+   <!-- /Yandex.Metrika counter -->
 </head>
 <body>
 <header class="page-header">
   <div class="page-header__wrapper">
-    <div class="page-header__logo-container">
+    <a class="page-header__logo-link" href="/">
       <img src="/img/logo.svg" alt="Логотип ФинЮрист" class="page-header__logo">
-    </div>
+    </a>
     <div class="page-header__phone-container">
       <a href="tel:+78003027150" class="page-header__phone-link">8 (800) 302-71-50</a>
       <span class="page-header__phone-description">(звонок бесплатный)</span>
@@ -35,8 +50,8 @@
       <span class="intro__description">Оставь заявку и мы уже в этом месяце остановим<br>все платежи по кредитам!</span>
       <span class="intro__null">Списать долги</span>
       <div class="intro__buttons-container">
-        <button class="intro__button">Более 500 000 руб.</button>
-        <button class="intro__button">Менее 500 000 руб.<br>с помощью МФЦ</button>
+        <button class="intro__button  intro__button--more-500">Более 500 000 руб.</button>
+        <button class="intro__button  intro__button--less-500">Менее 500 000 руб.<br>с помощью МФЦ</button>
       </div>
     </div>
   </section>
@@ -120,15 +135,20 @@
       <span class="attention__title">Внимание!</span>
       <div class="attention__container">
         <p class="attention__description">Для успешного сохранения вашего имущества необходимо начать процедуру банкротства до того, как кредитор начнёт активно взыскивать долг.<br><span class="strong">Оставьте заявку сейчас, чтобы точно успеть вернуть свои средства!</span></p>
-        <form action="#" method="post" class="attention__form">
+        <form action="mail.php" method="post" class="attention__form" id="attention-form-id">
+          <input type="hidden" name="d-title" id="attention-input-title" class="attention__input" placeholder="Заявка с блока ВНИМАНИЕ">
           <div class="attention__input-container">
             <input type="text" name="d-name" id="attention-input-name" class="attention__input" placeholder="Имя">
           </div>
           <div class="attention__input-container">
-            <input type="tel" name="d-phone" id="attention-input-phone" class="attention__input" placeholder="Телефон">
+            <input type="tel" name="d-phone" id="attention-input-phone" class="attention__input" placeholder="Телефон" required>
           </div>
           <div class="attention__submit-container">
             <input type="submit" class="attention__submit" value="Отправить">
+            <article class="confidbox">
+              <input type="checkbox" name="d-confid" id="attention-confid-id" class="confidbox__checkbox" required checked>
+              <label for="attention-confid-id" class="confidbox__label">Я соглашаюсь на обработку моих <a href="confid.html" target="_blank">персональных данных</a></label>
+            </article>
           </div>
         </form>
       </div>
@@ -184,9 +204,9 @@
         <li class="cases__item">
           <div class="cases__description-container">
             <span class="cases__item-title">Списание:</span>
-            <span class="cases__summary">6251057,26 руб.</span>
+            <span class="cases__summary">5045401,24 руб.</span>
             <span class="cases__item-subtitle">Было:</span>
-            <span class="cases__item-description">Долг <span>6251057,26 руб.</span></span>
+            <span class="cases__item-description">Долг <span>5045401,24 руб.</span></span>
             <span class="cases__item-subtitle">Решение:</span>
             <span class="cases__item-description">Признать банкротом</span>
           </div>
@@ -204,6 +224,418 @@
             <li class="cases__images-item  disable">
               <a href="/img/cases/02/2_page-0003.jpg" data-fancybox="case-2">
                 <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 2">
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="cases__item">
+          <div class="cases__description-container">
+            <span class="cases__item-title">Списание:</span>
+            <span class="cases__summary">2227226,69 руб.</span>
+            <span class="cases__item-subtitle">Было:</span>
+            <span class="cases__item-description">Долг <span>2227226,69 руб.</span></span>
+            <span class="cases__item-subtitle">Решение:</span>
+            <span class="cases__item-description">Признать банкротом</span>
+          </div>
+          <ul class="cases__images-list">
+            <li class="cases__images-item">
+              <a href="/img/cases/03/3_page-0001.jpg" data-fancybox="case-3">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 3">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/03/3_page-0002.jpg" data-fancybox="case-3">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 3">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/03/3_page-0003.jpg" data-fancybox="case-3">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 3">
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="cases__item">
+          <div class="cases__description-container">
+            <span class="cases__item-title">Списание:</span>
+            <span class="cases__summary">337037,19 руб.</span>
+            <span class="cases__item-subtitle">Было:</span>
+            <span class="cases__item-description">Долг <span>337037,19 руб.</span></span>
+            <span class="cases__item-subtitle">Решение:</span>
+            <span class="cases__item-description">Признать банкротом</span>
+          </div>
+          <ul class="cases__images-list">
+            <li class="cases__images-item">
+              <a href="/img/cases/04/4_page-0001.jpg" data-fancybox="case-4">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 4">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/04/4_page-0002.jpg" data-fancybox="case-4">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 4">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/04/4_page-0003.jpg" data-fancybox="case-4">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 4">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/04/4_page-0004.jpg" data-fancybox="case-4">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 4">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/04/4_page-0005.jpg" data-fancybox="case-4">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 4">
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="cases__item">
+          <div class="cases__description-container">
+            <span class="cases__item-title">Списание:</span>
+            <span class="cases__summary">4842186,49 руб.</span>
+            <span class="cases__item-subtitle">Было:</span>
+            <span class="cases__item-description">Долг <span>4842186,49 руб.</span></span>
+            <span class="cases__item-subtitle">Решение:</span>
+            <span class="cases__item-description">Признать банкротом</span>
+          </div>
+          <ul class="cases__images-list">
+            <li class="cases__images-item">
+              <a href="/img/cases/05/5_page-0001.jpg" data-fancybox="case-5">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 5">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/05/5_page-0002.jpg" data-fancybox="case-5">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 5">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/05/5_page-0003.jpg" data-fancybox="case-5">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 5">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/05/5_page-0004.jpg" data-fancybox="case-5">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 5">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/05/5_page-0005.jpg" data-fancybox="case-5">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 5">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/05/5_page-0006.jpg" data-fancybox="case-5">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 5">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/05/5_page-0007.jpg" data-fancybox="case-5">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 5">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/05/5_page-0008.jpg" data-fancybox="case-5">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 5">
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="cases__item">
+          <div class="cases__description-container">
+            <span class="cases__item-title">Списание:</span>
+            <span class="cases__summary">748317,50 руб.</span>
+            <span class="cases__item-subtitle">Было:</span>
+            <span class="cases__item-description">Долг <span>748317,50 руб.</span></span>
+            <span class="cases__item-subtitle">Решение:</span>
+            <span class="cases__item-description">Признать банкротом</span>
+          </div>
+          <ul class="cases__images-list">
+            <li class="cases__images-item">
+              <a href="/img/cases/06/6_page-0001.jpg" data-fancybox="case-6">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 6">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/06/6_page-0002.jpg" data-fancybox="case-6">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 6">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/06/6_page-0003.jpg" data-fancybox="case-6">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 6">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/06/6_page-0004.jpg" data-fancybox="case-6">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 6">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/06/6_page-0005.jpg" data-fancybox="case-6">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 6">
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="cases__item">
+          <div class="cases__description-container">
+            <span class="cases__item-title">Списание:</span>
+            <span class="cases__summary"></span>
+            <span class="cases__item-subtitle">Было:</span>
+            <span class="cases__item-description">Долг <span></span></span>
+            <span class="cases__item-subtitle">Решение:</span>
+            <span class="cases__item-description">Признать банкротом</span>
+          </div>
+          <ul class="cases__images-list">
+            <li class="cases__images-item">
+              <a href="/img/cases/07/7_page-0001.jpg" data-fancybox="case-7">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 7">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/07/7_page-0002.jpg" data-fancybox="case-7">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 7">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/07/7_page-0003.jpg" data-fancybox="case-7">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 7">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/07/7_page-0004.jpg" data-fancybox="case-7">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 7">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/07/7_page-0005.jpg" data-fancybox="case-7">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 7">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/07/7_page-0006.jpg" data-fancybox="case-7">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 7">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/07/7_page-0007.jpg" data-fancybox="case-7">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 7">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/07/7_page-0008.jpg" data-fancybox="case-7">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 7">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/07/7_page-0009.jpg" data-fancybox="case-7">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 7">
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="cases__item">
+          <div class="cases__description-container">
+            <span class="cases__item-title">Списание:</span>
+            <span class="cases__summary">126828,06 руб.</span>
+            <span class="cases__item-subtitle">Было:</span>
+            <span class="cases__item-description">Долг <span>126828,06 руб.</span></span>
+            <span class="cases__item-subtitle">Решение:</span>
+            <span class="cases__item-description">Признать банкротом</span>
+          </div>
+          <ul class="cases__images-list">
+            <li class="cases__images-item">
+              <a href="/img/cases/08/8_page-0001.jpg" data-fancybox="case-8">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 8">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/08/8_page-0002.jpg" data-fancybox="case-8">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 8">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/08/8_page-0003.jpg" data-fancybox="case-8">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 8">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/08/8_page-0004.jpg" data-fancybox="case-8">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 8">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/08/8_page-0005.jpg" data-fancybox="case-8">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 8">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/08/8_page-0006.jpg" data-fancybox="case-8">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 8">
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="cases__item">
+          <div class="cases__description-container">
+            <span class="cases__item-title">Списание:</span>
+            <span class="cases__summary">667052,75 руб.</span>
+            <span class="cases__item-subtitle">Было:</span>
+            <span class="cases__item-description">Долг <span>667052,75 руб.</span></span>
+            <span class="cases__item-subtitle">Решение:</span>
+            <span class="cases__item-description">Признать банкротом</span>
+          </div>
+          <ul class="cases__images-list">
+            <li class="cases__images-item">
+              <a href="/img/cases/08/8_page-0001.jpg" data-fancybox="case-9">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 9">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/09/9_page-0002.jpg" data-fancybox="case-9">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 9">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/09/9_page-0003.jpg" data-fancybox="case-9">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 9">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/09/9_page-0004.jpg" data-fancybox="case-9">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 9">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/09/9_page-0005.jpg" data-fancybox="case-9">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 9">
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="cases__item">
+          <div class="cases__description-container">
+            <span class="cases__item-title">Списание:</span>
+            <span class="cases__summary">128680,05 руб.</span>
+            <span class="cases__item-subtitle">Было:</span>
+            <span class="cases__item-description">Долг <span>128680,05 руб.</span></span>
+            <span class="cases__item-subtitle">Решение:</span>
+            <span class="cases__item-description">Признать банкротом</span>
+          </div>
+          <ul class="cases__images-list">
+            <li class="cases__images-item">
+              <a href="/img/cases/10/10_page-0001.jpg" data-fancybox="case-10">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 10">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/10/10_page-0002.jpg" data-fancybox="case-10">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 10">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/10/10_page-0003.jpg" data-fancybox="case-10">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 10">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/10/10_page-0004.jpg" data-fancybox="case-10">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 10">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/10/10_page-0005.jpg" data-fancybox="case-10">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 10">
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="cases__item">
+          <div class="cases__description-container">
+            <span class="cases__item-title">Списание:</span>
+            <span class="cases__summary">714990,03 руб.</span>
+            <span class="cases__item-subtitle">Было:</span>
+            <span class="cases__item-description">Долг <span>714990,03 руб.</span></span>
+            <span class="cases__item-subtitle">Решение:</span>
+            <span class="cases__item-description">Признать банкротом</span>
+          </div>
+          <ul class="cases__images-list">
+            <li class="cases__images-item">
+              <a href="/img/cases/11/11_page-0001.jpg" data-fancybox="case-11">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 11">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/11/11_page-0002.jpg" data-fancybox="case-11">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 11">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/11/11_page-0003.jpg" data-fancybox="case-11">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 11">
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="cases__item">
+          <div class="cases__description-container">
+            <span class="cases__item-title">Списание:</span>
+            <span class="cases__summary">4302405,41 руб.</span>
+            <span class="cases__item-subtitle">Было:</span>
+            <span class="cases__item-description">Долг <span>4302405,41 руб.</span></span>
+            <span class="cases__item-subtitle">Решение:</span>
+            <span class="cases__item-description">Признать банкротом</span>
+          </div>
+          <ul class="cases__images-list">
+            <li class="cases__images-item">
+              <a href="/img/cases/12/12_page-0001.jpg" data-fancybox="case-12">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 12">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/12/12_page-0002.jpg" data-fancybox="case-12">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 12">
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="cases__item">
+          <div class="cases__description-container">
+            <span class="cases__item-title">Списание:</span>
+            <span class="cases__summary">1484144,44 руб.</span>
+            <span class="cases__item-subtitle">Было:</span>
+            <span class="cases__item-description">Долг <span>1484144,44 руб.</span></span>
+            <span class="cases__item-subtitle">Решение:</span>
+            <span class="cases__item-description">Признать банкротом</span>
+          </div>
+          <ul class="cases__images-list">
+            <li class="cases__images-item">
+              <a href="/img/cases/13/13_page-0001.jpg" data-fancybox="case-13">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 13">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/13/13_page-0002.jpg" data-fancybox="case-13">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 13">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/13/13_page-0003.jpg" data-fancybox="case-13">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 13">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/13/13_page-0004.jpg" data-fancybox="case-13">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 13">
+              </a>
+            </li>
+            <li class="cases__images-item  disable">
+              <a href="/img/cases/13/13_page-0005.jpg" data-fancybox="case-13">
+                <img src="/img/cases__preview-doc.png" alt="Решение по банкротству 13">
               </a>
             </li>
           </ul>
@@ -269,22 +701,26 @@
       <div class="question__container">
         <span class="question__title">Остались вопросы?</span>
         <p class="question__description">Оставьте заявку! Поможем Вам разобраться в ситуации!</p>
-        <form action="#" method="post" class="question__form">
+        <form action="mail.php" method="post" class="question__form" id="question-form-id">
+          <input type="hidden" name="d-title" id="question-input-title" class="question__input" placeholder="Заявка остались вопросы">
           <div class="question__input-container">
             <input type="text" name="d-name" id="question-input-name" class="question__input" placeholder="Имя">
           </div>
           <div class="question__input-container">
-            <input type="tel" name="d-phone" id="question-input-phone" class="question__input" placeholder="Телефон">
+            <input type="tel" name="d-phone" id="question-input-phone" class="question__input" placeholder="Телефон" required>
           </div>
           <div class="question__submit-container">
             <input type="submit" class="question__submit" value="Отправить">
+            <article class="confidbox">
+              <input type="checkbox" name="d-confid" id="question-confid-id" class="confidbox__checkbox" required checked>
+              <label for="question-confid-id" class="confidbox__label">Я соглашаюсь на обработку моих <a href="confid.html" target="_blank">персональных данных</a></label>
+            </article>
           </div>
         </form>
       </div>
     </div>
   </section>
   <section class="map">
-<!--    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af3ab8f57ec889f321591d77a771953d2ea6e41ff7b7a5a6ed9ef073a5318a1c4&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>-->
     <div class="map__wrapper">
       <div class="map__container">
         <span class="map__title">Контакты</span>
@@ -304,56 +740,50 @@
       </div>
     </div>
     <div class="map__map">
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af3ab8f57ec889f321591d77a771953d2ea6e41ff7b7a5a6ed9ef073a5318a1c4&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
     </div>
   </section>
 </main>
 <footer class="page-footer">
-
+  <div class="page-footer__wrapper">
+    <div class="page-footer__first-container">
+      <a class="page-footer__logo-link" href="/">
+        <img src="/img/logo-alt.svg" alt="ФинЮрист" class="page-footer__logo">
+      </a>
+      <span class="page-footer__first-description">Возвращаем деньги за страховку</span>
+      <span class="page-footer__first-description">Работаем с 2018 года.</span>
+    </div>
+    <div class="page-footer__second-container">
+      <div class="page-footer__interactive-container">
+        <div class="page-footer__links-container">
+          <a href="tel:88003027150" class="page-footer__phone-link">8 (800) 302-71-50</a>
+          <span class="page-footer__phone-description">(звонок бесплатный)</span>
+        </div>
+        <div class="page-footer__button-container">
+          <button class="page-footer__button">Обратный звонок</button>
+        </div>
+      </div>
+      <div class="page-footer__socials">
+        <a href="https://vk.com/fin_yurist_bankrotstvo" rel="nofollow" target="_blank" class="page-footer__social-link  page-footer__social-link--vkontakte">Вконтакте</a>
+        <a href="https://www.instagram.com/fin_yurist_bankrotstvo/" rel="nofollow" target="_blank" class="page-footer__social-link  page-footer__social-link--instagram">Instagram</a>
+      </div>
+    </div>
+  </div>
 </footer>
-<article class="popup-callback  popup-callback--main  popup">
+<article class="popup-callback  popup-callback  popup">
   <button class="popup-callback__close-btn  close-btn">закрыть</button>
   <span class="popup-callback__title">Оставьте заявку</span>
   <span class="popup-callback__subtitle">Мы свяжемся с Вами в ближайшее время</span>
   <form action="mail.php" method="post" id="popup-callback-form-id" class="popup-callback__form">
-    <input type="hidden" name="form-title" value="Попап заявка">
+    <input type="hidden" name="d-title" id="popup-callback-title-id" value="Попап заявка">
     <input type="text" name="d-name" id="popup-callback-name-id" class="popup-callback__input  popup-callback__input--text" placeholder="Имя">
-    <input type="tel" name="d-tel" id="popup-callback-tel-id" class="popup-callback__input  popup-callback__tel" placeholder="Телефон" required>
+    <input type="tel" name="d-phone" id="popup-callback-tel-id" class="popup-callback__input  popup-callback__tel" placeholder="Телефон" required>
     <div class="popup-callback__submit-container">
       <button class="popup-callback__submit">Отправить</button>
       <article class="confid">
         <input type="checkbox" name="d-confid" id="popup-callback-confid-id" class="confid__checkbox" required checked>
         <label for="popup-callback-confid-id" class="confid__label">Я соглашаюсь на обработку моих <a href="confid.html" target="_blank">персональных данных</a></label>
       </article>
-    </div>
-    <div class="utm-container">
-      <input type="hidden" name="utm_source" value="<?php echo isset($_GET['utm_source']) ? $_GET['utm_source'] : '' ;?>">
-      <input type="hidden" name="utm_medium" value="<?php echo isset($_GET['utm_medium']) ? $_GET['utm_medium'] : '' ;?>">
-      <input type="hidden" name="utm_campaign" value="<?php echo isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : '' ;?>">
-      <input type="hidden" name="utm_term" value="<?php echo isset($_GET['utm_term']) ? $_GET['utm_term'] : '' ;?>">
-      <input type="hidden" name="utm_term" value="<?php echo isset($_GET['utm_term']) ? $_GET['utm_term'] : '' ;?>">
-    </div>
-  </form>
-</article>
-<article class="popup-callback  popup-callback--header  popup">
-  <button class="popup-callback__close-btn  close-btn">закрыть</button>
-  <span class="popup-callback__subtitle">Чтобы Вы не потеряли наш контакт, мы пришлем Вам свою визитку в формате СМС</span>
-  <form action="mail-header.php" method="post" id="popup-callback-form-id--header" class="popup-callback__form">
-    <input type="hidden" name="form-title" value="Выслать визитку">
-    <input type="text" name="d-name" id="popup-callback-name-id--header" class="popup-callback__input  popup-callback__input--text" placeholder="Имя">
-    <input type="tel" name="d-tel" id="popup-callback-tel-id--header" class="popup-callback__input  popup-callback__tel" placeholder="Телефон" required>
-    <div class="popup-callback__submit-container">
-      <button class="popup-callback__submit">Отправить</button>
-      <article class="confid">
-        <input type="checkbox" name="d-confid" id="popup-callback-confid-id-header" class="confid__checkbox" required checked>
-        <label for="popup-callback-confid-id-header" class="confid__label">Я соглашаюсь на обработку моих <a href="confid.html" target="_blank">персональных данных</a></label>
-      </article>
-    </div>
-    <div class="utm-container">
-      <input type="hidden" name="utm_source" value="<?php echo isset($_GET['utm_source']) ? $_GET['utm_source'] : '' ;?>">
-      <input type="hidden" name="utm_medium" value="<?php echo isset($_GET['utm_medium']) ? $_GET['utm_medium'] : '' ;?>">
-      <input type="hidden" name="utm_campaign" value="<?php echo isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : '' ;?>">
-      <input type="hidden" name="utm_term" value="<?php echo isset($_GET['utm_term']) ? $_GET['utm_term'] : '' ;?>">
-      <input type="hidden" name="utm_term" value="<?php echo isset($_GET['utm_term']) ? $_GET['utm_term'] : '' ;?>">
     </div>
   </form>
 </article>
