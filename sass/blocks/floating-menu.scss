@@ -1,0 +1,110 @@
+.floating-menu {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: -100px;
+  background-color: #fff;
+  transition: all .2s 0s ease-in-out;
+  width: 100%;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, .2);
+  &.active {
+    top: 0;
+  }
+  .floating-menu__wrapper {
+    @include centers;
+    @include paddings;
+    @include section-width;
+    display: flex;
+    align-items: center;
+    @media #{$max-mobile-width} {
+      padding-top: 25px;
+      padding-bottom: 15px;
+    }
+    @media #{$min-tablet-width} {
+      padding-top: 15px;
+      padding-bottom: 13px;
+    }
+    @media #{$min-desktop-width} {
+      padding-top: 15px;
+      padding-bottom: 13px;
+    }
+  }
+  .floating-menu__logo-link {
+    margin-right: auto;
+    display: block;
+    @media #{$max-mobile-width} {
+      width: 170px;
+    }
+    @media #{$min-tablet-width} {
+      width: 155px;
+    }
+    @media #{$min-desktop-width} {
+      width: 222px;
+    }
+  }
+  .floating-menu__phone-container {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media #{$max-mobile-width} {
+      margin-right: 5px;
+      flex-shrink: 0;
+      padding-left: 5px;
+    }
+    @media #{$min-tablet-width} {
+      margin-right: 42px;
+      padding-left: 40px;
+      position: relative;
+    }
+    @media #{$min-desktop-width} {
+      margin-right: 60px;
+    }
+    &::before {
+      @media #{$min-tablet-width} {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url("/img/phone-icon.svg");
+      }
+    }
+  }
+  .floating-menu__phone-link {
+    font-size: 15px;
+    color: $color--main;
+    @media #{$min-desktop-width} {
+      font-size: 16px;
+    }
+  }
+  .floating-menu__phone-description {
+    color: $color--alt;
+    font-weight: 300;
+    font-size: 12px;
+    margin-top: 3px;
+  }
+  .floating-menu__button-container {
+    @media #{$max-mobile-width} {
+      width: 40px;
+    }
+    @media #{$min-tablet-width} {
+      width: 220px;
+    }
+  }
+  .floating-menu__button {
+    @include main-btn;
+    @include main-btn--header;
+    @media #{$max-mobile-width} {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 24px 24px;
+      background-image: url("/img/phone-icon-white.svg");
+    }
+  }
+}

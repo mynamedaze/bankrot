@@ -40,6 +40,7 @@ $(document).ready(function () {
     }
 
     $('.page-header__button').click(openCallbackPopup('Обратная заявка с шапки'));
+    $('.floating-menu__button').click(openCallbackPopup('Обратная заявка с плавающего меню'));
     $('.page-footer__button').click(openCallbackPopup('Обратная заявка с футера'));
     $('.ten__button').click(openCallbackPopup('Заявка с рассрочкой'));
     $('.pick__button').click(openCallbackPopup('Заявка подобрать лучший способ'));
@@ -217,9 +218,9 @@ $(document).ready(function () {
 
     var hiddenMenuDown = function () {
         if (window.pageYOffset > 100) {
-            $(travelMenu).addClass('floating-menu--active');
+            $(travelMenu).addClass('active');
         } else {
-            $(travelMenu).removeClass('floating-menu--active');
+            $(travelMenu).removeClass('active');
         }
     }
 
