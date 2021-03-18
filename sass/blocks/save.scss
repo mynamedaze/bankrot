@@ -4,12 +4,12 @@
     @include paddings;
     @include centers;
     @media #{$max-mobile-width} {
-      padding-top: 35px;
+      padding-top: 10px;
       padding-bottom: 10px;
     }
     @media #{$min-tablet-width} {
-      padding-top: 60px;
-      padding-bottom: 20px;
+      padding-top: 20px;
+      padding-bottom: 40px;
     }
     @media #{$min-tablet-width} {
       background-repeat: no-repeat;
@@ -64,6 +64,31 @@
     letter-spacing: .9px;
     @media #{$min-desktop-width} {
       line-height: 30px;
+    }
+  }
+  .save__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .save__button {
+    font-size: 0 !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60% auto;
+    background-image: url("/img/phone-icon-white.svg");
+    @include main-btn;
+    @media #{$max-mobile-width} {
+      width: 38px;
+      min-height: 38px;
+    }
+    @media #{$min-tablet-width} {
+      width: 42px;
+      min-height: 42px;
+    }
+    @media #{$min-desktop-width} {
+      width: 59px;
+      min-height: 59px;
     }
   }
 }

@@ -40,6 +40,7 @@ $(document).ready(function () {
     }
 
     $('.page-header__button').click(openCallbackPopup('Обратная заявка с шапки'));
+    $('.save__button').click(openCallbackPopup('Сохраняем имущество'));
     $('.floating-menu__button').click(openCallbackPopup('Обратная заявка с плавающего меню'));
     $('.page-footer__button').click(openCallbackPopup('Обратная заявка с футера'));
     $('.ten__button').click(openCallbackPopup('Заявка с рассрочкой'));

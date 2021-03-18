@@ -1,18 +1,22 @@
 .intro {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media #{$max-mobile-width} {
+    background-image: url("/img/intro__bg--mobile.jpg");
+  }
+  @media #{$min-tablet-width} {
+    background-image: url("/img/intro__bg--desktop.jpg");
+  }
   .intro__wrapper {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     @include section-width;
     @include paddings;
     @include centers;
     @media #{$max-mobile-width} {
-      background-image: url("/img/intro__bg--mobile.jpg");
       padding-top: 22px;
       padding-bottom: 24px;
     }
     @media #{$min-tablet-width} {
-      background-image: url("/img/intro__bg--desktop.jpg");
       padding-top: 63px;
       padding-bottom: 42px;
     }

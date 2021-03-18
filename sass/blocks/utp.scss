@@ -8,21 +8,23 @@
       padding-bottom: 35px;
     }
     @media #{$min-tablet-width} {
-      padding-bottom: 42px;
+      padding-bottom: 20px;
+      padding-top: 20px;
     }
     @media #{$min-desktop-width} {
-      padding-bottom: 61px;
+      padding-bottom: 20px;
+      padding-top: 40px;
     }
   }
   .utp__list {
     padding-left: 0;
     max-width: 980px;
     @include centers;
+    margin-top: 0;
     margin-bottom: 0;
     @media #{$min-tablet-width} {
       display: flex;
       justify-content: space-between;
-      margin-top: 30px;
     }
   }
   .utp__item {

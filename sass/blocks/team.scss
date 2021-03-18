@@ -32,8 +32,34 @@
     display: block;
     font-family: $font--alt;
     font-size: 24px;
+    position: relative;
+    margin-bottom: 10px;
+    @media #{$max-mobile-width} {
+      text-align: center;
+    }
     @media #{$min-desktop-width} {
       font-size: 30px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 69px;
+      height: 2px;
+      bottom: -2px;
+      background-color: #C78B4D;
+      @media #{$max-mobile-width} {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      @media #{$min-tablet-width} {
+        left: 0;
+      }
+    }
+  }
+  .team__item-post {
+    display: block;
+    @media #{$max-mobile-width} {
+      text-align: center;
     }
   }
   .team__item-description {
@@ -41,13 +67,14 @@
     font-size: 15px;
     color: #C4C4C4;
     @media #{$max-mobile-width} {
-      margin-top: 20px;
+      margin-top: 5px;
+      text-align: center;
     }
     @media #{$min-tablet-width} {
-      margin-top: 9px;
+      margin-top: 4px;
     }
     @media #{$min-desktop-width} {
-      margin-top: 13px;
+      margin-top: 7px;
     }
   }
 }
